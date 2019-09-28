@@ -37,7 +37,7 @@ class NavContact extends Component {
         </div>
         <div style={{textDecoration:'none', cursor : 'pointer'}} onClick={this.props.onClick1}>
           <div style = {{fontSize : 12, height : 30, marginTop : 50, marginLeft:25, width:200, color:'white', backgroundColor : '#00173d', display : 'flex', flexDirection:'column', justifyContent:'center', flexDirection:'column', alignItems:'center', borderColor:'#00173d', borderStyle:'solid', borderRadius:15, borderWidth : 1}}>
-              <div style={{ textAlign:'center'}}>CV .pdf
+              <div style={{ textAlign:'center'}}>CV
               </div>
           </div>
         </div>

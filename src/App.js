@@ -24,7 +24,7 @@ import Competence from './components/Competence';
 import PartieCV from './components/PartieCV';
 import WindowHome from './components/WindowHome';
 
-import CVtoDownload from './assets/pdf/CV_YolanPibrac.pdf';
+import CVtoDownload from './assets/images/CV_YolanPibrac.pdf';
 import PortfoliotoDownload from './assets/pdf/Portfolio_YolanPibrac.pdf';
 
 import scrollToComponent from 'react-scroll-to-component';
@@ -485,15 +485,7 @@ class App extends Component {
               <NavContact onClick1={this.popUpCV} onClick2={this.popUpPortfolio}></NavContact>
 
             </Nav>
-            {this.state.popUpCV ?
-              <ScrollLock>
-                <Popup  content={<PopupCV/>} titre={'CURICULUM VITAE'} text='Close Me' closePopup={this.popUpCV} download={true}  src={CVtoDownload} titreDownload={'CV_YolanPibrac'} open={true}/>
-              </ScrollLock> : null
-            }
-            {this.state.popUpPortfolio ? <ScrollLock>
-              <Popup content={<PopupPortfolio/>} titre={'PORTEFOLIO'} text='Close Me' closePopup={this.popUpPortfolio}  download={true} src={PortfoliotoDownload} titreDownload={'Portfolio_YolanPibrac'} open={true}/>
-              </ScrollLock> : null
-            }
+
         </header>
 
 
@@ -517,6 +509,17 @@ class App extends Component {
 
               {this.state.ongletSelected==="web"?
                 <div style={styles.lineProjects}>
+                
+                  {this.state.popUpCV ?
+                    <ScrollLock>
+                      <Popup  content={<PopupCV/>} titre={'CURICULUM VITAE'} text='Close Me' closePopup={this.popUpCV} download={true}  src={CVtoDownload} titreDownload={'CV_YolanPibrac'} open={true}/>
+                    </ScrollLock> : null
+                  }
+                  {this.state.popUpPortfolio ? <ScrollLock>
+                    <Popup content={<PopupPortfolio/>} titre={'PORTEFOLIO'} text='Close Me' closePopup={this.popUpPortfolio}  download={true} src={PortfoliotoDownload} titreDownload={'Portfolio_YolanPibrac'} open={true}/>
+                    </ScrollLock> : null
+                  }
+
                   <InstanceProject src={require('./assets/images/projets/16_do-you-wanna-bet/home.png')} titre='Do you wanna bet'  description={"Application and website to store the bet you made with friends"} type= {"Informatique"} date={'2019'}
                   content={
                     <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
@@ -661,27 +664,19 @@ class App extends Component {
               <div onMouseEnter={this.enterMoins} onMouseLeave={this.leaveMoins} onClick={this.decreaseCVSize}  style={{display:"flex", flexDirection:'row', justifyContent:"center", alignItems:"center",width:50, height:50, backgroundColor:this.state.hoverMoins?"rgba(150,150,150,1)":"rgba(200,200,200,1)", color:"white", borderRadius:"50%", cursor:"pointer", borderStyle:"solid", borderWidth:1, textAlign:"center", borderColor:"rgba(100,100,100,1)"}}>-</div>
             </div>
 
-            <div style={{width : "80vw",  height:"100%", minHeight:"80vh", display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}}>
-              <img src={CV} style={{ width:this.state.sizeCV+"vw", maxWidth : "80vw",height:"100%", backgroundColor:'rgba(255,255,255,1)', boxShadow:'5px 5px 2px 0 rgba(0, 0, 0, 0.5)'}}/>
+            <div style={{cursor:"pointer", width : "80vw",  height:"100%", minHeight:"80vh", display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}}>
+              <img onClick={this.popUpCV} src={CV} style={{ width:this.state.sizeCV+"vw", maxWidth : "80vw",height:"100%", backgroundColor:'rgba(255,255,255,1)', boxShadow:'5px 5px 2px 0 rgba(0, 0, 0, 0.5)'}}/>
             </div>
           </div>
 
           <div style={{display : 'flex', flexDirection : 'row', marginTop:30, justifyContent:"center"}}>
 
-            <div style={{textDecoration:'none', cursor : 'pointer'}} onClick={this.popUpCV} onMouseEnter={this.CVover} onMouseLeave={this.CVover}>
+            <a download={'CV_YolanPibrac'} href={CVtoDownload} style={{textDecoration:'none', cursor : 'pointer', textDecoration:"none", color:"white"}} onMouseEnter={this.CVover} onMouseLeave={this.CVover}>
               <BoutonTelecharger pose={!this.state.CVover ? "position2" : "hidden"} style={{fontSize : 12, height : 30, marginTop : 0, marginLeft:0, width:200,  color : 'white', backgroundColor:'#00173d', display : 'flex', flexDirection:'column', justifyContent:'center', flexDirection:'column', alignItems:'center', borderColor:'#00173d', borderStyle:'solid', borderRadius:15, borderWidth : 1}}>
-                  <div style={{ textAlign:'center'}}>Download CV.pdf
-                  </div>
+                  <a  style={{ textAlign:'center'}}>Download CV.pdf
+                  </a>
               </BoutonTelecharger>
-            </div>
-            {/*
-              <div  style={{ textDecoration:'none', cursor : 'pointer'}} onClick={this.popUpPortfolio} onMouseEnter={this.Portfolioover} onMouseLeave={this.Portfolioover}>
-                <BoutonTelecharger  pose={!this.state.Portfolioover ? "position2" : "hidden"} style={{fontSize : 12, height : 30, marginTop : 0, marginLeft:20, width:200, color : 'white', backgroundColor:'#00173d', display : 'flex', flexDirection:'column', justifyContent:'center', flexDirection:'column', alignItems:'center', borderColor:'#00173d', borderStyle:'solid', borderRadius:15, borderWidth : 1}}>
-                    <div style={{ textAlign:'center', alignItems: 'center', textDecoration:'none'}}>PORTEFOLIO .pdf
-                    </div>
-                </BoutonTelecharger>
-              </div>
-              */}
+            </a>
           </div>
             {/*
               <div style={{"width":"90%", 'marginLeft': '5%',  marginBottom:50}}>
