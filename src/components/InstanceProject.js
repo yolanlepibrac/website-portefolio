@@ -133,9 +133,9 @@ class InstanceProject extends Component {
               {this.props.description}
           </div> : null }
           </Description>
-          <Zoom pose={this.state.hovered ? "hovered" : "idle"} style={{width:'100%', height:'100%', zIndex: 1, backgroundImage: "url("+ this.props.src +")", backgroundSize: 'cover', flexDirection : 'column', justifyContent : 'space-between', overflow : 'hidden'}}>
-          </Zoom>
-          <div style={{width: '100%', color: this.props.color, backgroundColor:"rgba(200,200,200,1)", paddingTop:2, fontSize : 18, textAlign:'left', zIndex:100, textAlign:"center"}}>
+          <div style={{width:'100%', height:'100%', zIndex: 1, backgroundImage: "url("+ this.props.src +")", backgroundSize: 'cover', flexDirection : 'column', justifyContent : 'space-between', overflow : 'hidden'}}>
+          </div>
+          <div style={{width: '100%', color: "white", backgroundColor:"rgba(200,200,200,1)", paddingTop:2, fontSize : 18, textAlign:'left', zIndex:100, textAlign:"center", fontSize:16, height:30, display:"flex", alignItems:"center", justifyContent:"center"}}>
               {this.props.titre}
           </div>
 

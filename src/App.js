@@ -136,6 +136,131 @@ const CompetenceTechnosBar = posed.div({
      },
 });
 
+var webProject = [
+  {
+    title : "Do you wanna bet",
+    description : "Application and website to store the bet you made with friends",
+    homeImage : require('./assets/images/projets/16_do-you-wanna-bet/home.png'),
+    detailImage : require('./assets/images/projets/16_do-you-wanna-bet/detail.png'),
+    source : 'http://yolan-pibrac.com/do-you-wanna-bet/',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Images Displayer",
+    description : "Engine to search and store your favourites movies",
+    homeImage : require('./assets/images/projets/17_images-displayer/home.png'),
+    detailImage : require('./assets/images/projets/17_images-displayer/detail.png'),
+    source : 'http://yolan-pibrac.com/images-displayer/',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Movie displayer",
+    description : "Display of images in a complex grid to store favourites pictures",
+    homeImage : require('./assets/images/projets/13_movie-displayer/home.png'),
+    detailImage : require('./assets/images/projets/13_movie-displayer/detail.png'),
+    source : 'http://yolan-pibrac.com/movies-displayer/',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Image processing",
+    description : "Website where you can apply filters on your pictures, and download it.",
+    homeImage : require('./assets/images/projets/14_image-processing/home.png'),
+    detailImage : require('./assets/images/projets/14_image-processing/detail.png'),
+    source : 'http://yolan-pibrac.com/image-processing/',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "What will we eat",
+    description : "Random generation of places to eat, depending of the current day.",
+    homeImage : require('./assets/images/projets/15_what-will-we-eat/home.png'),
+    detailImage : require('./assets/images/projets/15_what-will-we-eat/detail.png'),
+    source : 'http://yolan-pibrac.com/what-will-we-eat/',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "ICOS Application",
+    description : "Interface de représentation d'une base de donnée de process BIM et extensions Tekla",
+    homeImage : require('./assets/images/projets/21_ICOS-applications/home.png'),
+    detailImage : require('./assets/images/projets/21_ICOS-applications/detail.png'),
+    source : '',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Find the seal",
+    description : "Video Game for smartphone",
+    homeImage : require('./assets/images/projets/18_find-the-seal/home.png'),
+    detailImage : require('./assets/images/projets/18_find-the-seal/detail.png'),
+    source : 'https://play.google.com/store/apps/details?id=com.findtheseal',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Save the bear",
+    description : "Video Game for smartphone",
+    homeImage : require('./assets/images/projets/19_save-the-bear/home.png'),
+    detailImage : require('./assets/images/projets/19_save-the-bear/detail.png'),
+    source : 'https://play.google.com/store/apps/details?id=com.savethebear',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Drive the pinguins",
+    description : "Video Game for smartphone",
+    homeImage : require('./assets/images/projets/20_drive-the-pinguins/home.png'),
+    detailImage : require('./assets/images/projets/20_drive-the-pinguins/detail.png'),
+    source : 'https://play.google.com/store/apps/details?id=com.drivethepinguins',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "Kapla Simulator",
+    description : "Simulator de Kapla tri-dimansionnel",
+    homeImage : require('./assets/images/not-available-yet.png'),
+    detailImage : "",
+    source : '',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+  {
+    title : "10 puissance 4",
+    description : "Puissance 4 dans un espace vectoriel de dimension 10 (jeux smartphone)",
+    homeImage : require('./assets/images/not-available-yet.png'),
+    detailImage : "",
+    source : '',
+    download:false,
+    open:false,
+    date:2019,
+    type:"web"
+  },
+];
+
+
 
 
 class App extends Component {
@@ -301,18 +426,7 @@ class App extends Component {
              <div className="HomeInterior" style={{ height:"85vh", width : "100%", margin:0, padding:0, position:"relative",  backgroundColor:'rgba(0,0,0,0.3)' }}>
               <div style={{height:50, width:100}}>
               </div>
-               <div style={{width:"80%", marginLeft:"10%", display:"flex", flexDirection:"column",  alignItems:"flex-start", backgroundColor:'rgba(0,0,0,0)', borderStyle:"solid", borderWidth:5, borderColor:"rgba(255,255,255,1)", marginBottom:20}}>
-                   <div style={{width:"100%", fontSize:20, color:"black", backgroundColor:'rgba(255,255,255,1)', paddingBottom:5}}>WEBSITES</div>
-                   <div style={{ display:"flex", flexDirection:"column", padding:10, color:"white"}}>
-                     <a href="http://yolan-pibrac.com/movies-displayer/" style={{textDecoration:"none",color:'white'}}>http://yolan-pibrac.com/movies-displayer</a>
-                     <a href="http://yolan-pibrac.com/image-processing/" style={{textDecoration:"none",color:'white'}}>http://yolan-pibrac.com/image-processing</a>
-                     <a href="http://yolan-pibrac.com/what-will-we-eat/" style={{textDecoration:"none",color:'white'}}>http://yolan-pibrac.com/what-will-we-eat</a>
-                     <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-                       <a href="http://yolan-pibrac.com/do-you-wanna-bet/" style={{textDecoration:"none",color:'white'}}>http://yolan-pibrac.com/do-you-wanna-bet</a>
-                       <a href='https://play.google.com/store/apps/details?id=com.doyouwannabet&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width={50}/></a>
-                     </div>
-                   </div>
-               </div>
+
 
                <div style={{width:"80%", marginLeft:"10%", display:"flex", flexDirection:"column",  alignItems:"flex-start", backgroundColor:'rgba(0,0,0,0)', borderStyle:"solid", borderWidth:5, borderColor:"rgba(255,255,255,1)", marginBottom:20}}>
                  <div style={{width:"100%", fontSize:20, color:"black", backgroundColor:'rgba(255,255,255,1)', paddingBottom:5}}>TECHNOS</div>
@@ -351,18 +465,6 @@ class App extends Component {
          <div className="Home" style={{height : "85vh", overflow:"hidden", width:"80vw"}} ref={(div) => { this.Home = div; }}>
            <div style={{height : "85vh", color:'white', backgroundImage: "url("+ Image +")", backgroundSize: 'cover'}}>
              <div className="HomeInterior" style={{ height:"85vh", width : "100%", margin:0, padding:0, position:"relative",  backgroundColor:'rgba(0,0,0,0.3)' }}>
-               <WindowHome top={"10vh"} left={"3vw"} fontSize={20} scale={1.12}>
-                   <div style={{width:"100%", fontSize:25, color:"black", backgroundColor:'rgba(255,255,255,1)', paddingBottom:5}}>WEBSITES</div>
-                   <div style={{ display:"flex", flexDirection:"column", padding:10, color:"white", justifyContent:"space-between", height:"100%"}}>
-                     <a href="http://yolan-pibrac.com/movies-displayer/" style={{textDecoration:"none",color:'white', backgroundColor:colorSurline}}>http://yolan-pibrac.com/movies-displayer</a>
-                     <a href="http://yolan-pibrac.com/image-processing/" style={{textDecoration:"none",color:'white', backgroundColor:colorSurline}}>http://yolan-pibrac.com/image-processing</a>
-                     <a href="http://yolan-pibrac.com/what-will-we-eat/" style={{textDecoration:"none",color:'white', backgroundColor:colorSurline}}>http://yolan-pibrac.com/what-will-we-eat</a>
-                     <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-                       <a href="http://yolan-pibrac.com/do-you-wanna-bet/" style={{textDecoration:"none",color:'white', backgroundColor:colorSurline}}>http://yolan-pibrac.com/do-you-wanna-bet</a>
-                       <a href='https://play.google.com/store/apps/details?id=com.doyouwannabet&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width={100}/></a>
-                     </div>
-                   </div>
-               </WindowHome>
 
                <WindowHome top={"5vh"} left={"47vw"} fontSize={21} scale={1.07}>
                  <div style={{width:"100%", fontSize:25, color:"black", backgroundColor:'rgba(255,255,255,1)', paddingBottom:5}}>INFOS</div>
@@ -451,6 +553,23 @@ class App extends Component {
    this.setState({ongletSelected:"archi"})
  }
 
+ displayWebProjects = (project, key) => {
+   return (
+   <InstanceProject src={project.homeImage} titre={project.title}  description={project.description} type= {project.type} date={project.date}
+   content={
+     <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
+       <div style={{width:"100%", height:30, backgroundColor:"white"}}>visite the website on :
+         <a href={project.source}>{project.source}</a>
+       </div>
+       <div style={{width:"100%", height:"100%", backgroundImage: "url("+ project.detailImage +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
+       </div>
+     </div>}
+   download={project.download} open={project.open} source={project.source}>
+   </InstanceProject>)
+
+
+ }
+
 
 
   render() {
@@ -509,7 +628,7 @@ class App extends Component {
 
               {this.state.ongletSelected==="web"?
                 <div style={styles.lineProjects}>
-                
+
                   {this.state.popUpCV ?
                     <ScrollLock>
                       <Popup  content={<PopupCV/>} titre={'CURICULUM VITAE'} text='Close Me' closePopup={this.popUpCV} download={true}  src={CVtoDownload} titreDownload={'CV_YolanPibrac'} open={true}/>
@@ -520,57 +639,9 @@ class App extends Component {
                     </ScrollLock> : null
                   }
 
-                  <InstanceProject src={require('./assets/images/projets/16_do-you-wanna-bet/home.png')} titre='Do you wanna bet'  description={"Application and website to store the bet you made with friends"} type= {"Informatique"} date={'2019'}
-                  content={
-                    <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
-                      <div style={{width:"100%", height:30, backgroundColor:"white"}}>Visite the website on :
-                        <a href="http://yolan-pibrac.com/what-will-we-eat/">http://yolan-pibrac.com/do-you-wanna-bet</a>
-                      </div>
-                      <div style={{width:"100%", height:30, backgroundColor:"white", display:"flex", alignItems:"center", justifyContent:"center"}}>Download on PlayStore :
-                        <a href='https://play.google.com/store/apps/details?id=com.doyouwannabet&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height={30}/></a>
-                      </div>
-                      <div style={{width:"100%", height:"100%", backgroundImage: "url("+ require('./assets/images/projets/16_do-you-wanna-bet/detail.png') +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
-                      </div>
-                    </div>}
-                  download={false} open={false} source={'http://yolan-pibrac.com/do-you-wanna-bet/'}>
-                  </InstanceProject>
-
-                  <InstanceProject src={require('./assets/images/projets/13_movie-displayer/home.png')} titre='Movie displayer'  description={"Engine to search and store your favourites movies"} type= {"Informatique"} date={'2019'}
-                  content={
-                    <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
-                      <div style={{width:"100%", height:30, backgroundColor:"white"}}>visite the website on :
-                        <a href="http://yolan-pibrac.com/movies-displayer/">http://yolan-pibrac.com/movies-displayer</a>
-                      </div>
-                      <div style={{width:"100%", height:"100%", backgroundImage: "url("+ require('./assets/images/projets/13_movie-displayer/detail.png') +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
-                      </div>
-                    </div>}
-                  download={false} open={false} source={'http://yolan-pibrac.com/movies-displayer/'}>
-                  </InstanceProject>
-
-                  <InstanceProject src={require('./assets/images/projets/14_image-processing/home.png')} titre='Image processing'  description={"Website where you can apply filters on your pictures, and download it."} type= {"Informatique"} date={'2019'}
-                  content={
-                    <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
-                      <div style={{width:"100%", height:30, backgroundColor:"white"}}>visite the website on :
-                        <a href="http://yolan-pibrac.com/image-processing/">http://yolan-pibrac.com/image-processing</a>
-                      </div>
-                      <div style={{width:"100%", height:"100%", backgroundImage: "url("+ require('./assets/images/projets/14_image-processing/detail.png') +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
-                      </div>
-                    </div>}
-                  download={false} open={false} source={'http://yolan-pibrac.com/image-processing/'}>
-                  </InstanceProject>
-
-                  <InstanceProject src={require('./assets/images/projets/15_what-will-we-eat/home.png')} titre='What will we eat'  description={"Random generation of places to eat, depending of the current day."} type= {"Informatique"} date={'2019'}
-                  content={
-                    <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
-                      <div style={{width:"100%", height:30, backgroundColor:"white"}}>visite the website on :
-                        <a href="http://yolan-pibrac.com/what-will-we-eat/">http://yolan-pibrac.com/what-will-we-eat</a>
-                      </div>
-                      <div style={{width:"100%", height:"100%", backgroundImage: "url("+ require('./assets/images/projets/15_what-will-we-eat/detail.png') +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
-                      </div>
-                    </div>}
-                  download={false} open={false} source={'http://yolan-pibrac.com/what-will-we-eat/'}>
-                  </InstanceProject>
-
+                  {webProject.map((project, key)=> {
+                    return this.displayWebProjects(project, key)
+                  })}
 
                 </div>
               :null
