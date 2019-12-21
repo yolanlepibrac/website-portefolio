@@ -39,13 +39,14 @@ var CV = require('./assets/images/CV_YolanPibrac.png');
 const colorSurline = "rgba(0,0,0, 0.5)";
 const fontSizeSubtitle = 23;
 const tabOfCompetence=[
-  {title:"javascript",value:1, indice:1},
+  {title:"Javascript",value:1, indice:1},
   {title:"html",value:0.9, indice:2},
   {title:"css",value:0.7, indice:3},
   {title:"ReactJS",value:0.9, indice:4},
   {title:"ReactNative",value:0.85, indice:5},
-  {title:"visual basic",value:0.7, indice:6},
-  {title:"java",value:0.4, indice:7},
+  {title:"Mithril",value:0.6, indice:6},
+  {title:"Visual Basic",value:0.7, indice:7},
+  {title:"Java",value:0.4, indice:8},
 ];
 
 const Nav = posed.div({
@@ -143,6 +144,7 @@ var webProject = [
     homeImage : require('./assets/images/projets/16_do-you-wanna-bet/home.png'),
     detailImage : require('./assets/images/projets/16_do-you-wanna-bet/detail.png'),
     source : 'http://yolan-pibrac.com/do-you-wanna-bet/',
+    sourceAndroid : "https://play.google.com/store/apps/details?id=com.doyouwannabet&gl=FR",
     download:false,
     open:false,
     date:2019,
@@ -208,7 +210,8 @@ var webProject = [
     description : "Video Game for smartphone",
     homeImage : require('./assets/images/projets/18_find-the-seal/home.png'),
     detailImage : require('./assets/images/projets/18_find-the-seal/detail.png'),
-    source : 'https://play.google.com/store/apps/details?id=com.findtheseal',
+    source : "",
+    sourceAndroid : "https://play.google.com/store/apps/details?id=com.findtheseal",
     download:false,
     open:false,
     date:2019,
@@ -219,7 +222,7 @@ var webProject = [
     description : "Video Game for smartphone",
     homeImage : require('./assets/images/projets/19_save-the-bear/home.png'),
     detailImage : require('./assets/images/projets/19_save-the-bear/detail.png'),
-    source : 'https://play.google.com/store/apps/details?id=com.savethebear',
+    sourceAndroid : 'https://play.google.com/store/apps/details?id=com.savethebear',
     download:false,
     open:false,
     date:2019,
@@ -230,7 +233,7 @@ var webProject = [
     description : "Video Game for smartphone",
     homeImage : require('./assets/images/projets/20_drive-the-pinguins/home.png'),
     detailImage : require('./assets/images/projets/20_drive-the-pinguins/detail.png'),
-    source : 'https://play.google.com/store/apps/details?id=com.drivethepinguins',
+    sourceAndroid : 'https://play.google.com/store/apps/details?id=com.drivethepinguins',
     download:false,
     open:false,
     date:2019,
@@ -394,10 +397,10 @@ class App extends Component {
 
  renderItemTabOfCompetence = (competence) => {
    return(
-   <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", height:30, textAlign:"left", width:"95%"}}>
-     <div style={{minWidth:140, height:30}}>{competence.title}
-     </div>
-     <CompetenceTechnosBar style={{height:20}} width={competence.value*70+"%"} pose={this.state.hoverTechnos ? "hovered" : "idle"} i={competence.indice}>
+   <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", height:25, textAlign:"left", width:"95%"}}>
+     <strong style={{minWidth:140, height:"100%", fontSize:20}}>{competence.title}
+     </strong>
+     <CompetenceTechnosBar style={{height:18}} width={competence.value*70+"%"} pose={this.state.hoverTechnos ? "hovered" : "idle"} i={competence.indice}>
      </CompetenceTechnosBar>
    </div>)
  }
@@ -556,15 +559,26 @@ class App extends Component {
  displayWebProjects = (project, key) => {
    return (
    <InstanceProject src={project.homeImage} titre={project.title}  description={project.description} type= {project.type} date={project.date}
+   download={project.download} open={project.open} source={project.source}
    content={
      <div style={{width:"100%", height:"100%", textAlign:"center", fontSize:15, marginTop:10}}>
-       <div style={{width:"100%", height:30, backgroundColor:"white"}}>visite the website on :
-         <a href={project.source}>{project.source}</a>
-       </div>
+        <div style={{width:"100%",display:"flex", justifyContent:"center", alignItems:"center"}}>
+           {project.source && <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:40, backgroundColor:"white"}}>Visite the website on :
+             <a href={project.source}>{project.source}</a>
+           </div>
+           }
+           {project.sourceAndroid &&
+             <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginLeft:20, marginRight:20}}>Get App on :
+               <a href={project.sourceAndroid}>
+                 <div style={{width:100, height:40, backgroundImage: "url("+ require("./assets/images/google-play-badge.png") +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
+                 </div>
+              </a>
+            </div>
+          }
+        </div>
        <div style={{width:"100%", height:"100%", backgroundImage: "url("+ project.detailImage +")", backgroundSize: isMobileState?"contain":"cover", backgroundRepeat: "no-repeat"}}>
        </div>
-     </div>}
-   download={project.download} open={project.open} source={project.source}>
+     </div>}>
    </InstanceProject>)
 
 
